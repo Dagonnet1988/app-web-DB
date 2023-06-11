@@ -1,0 +1,33 @@
+<hr>
+<div class="container">
+  <form class="d-flex" role="search">
+    <app-search-box (onValue)="searchForConsult($event)"></app-search-box>
+  </form>
+</div>
+  <hr>
+
+
+
+<table class="table table-hover" >
+  <thead>
+    <tr class="fs-2">
+      <th scope="col">Cédula</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Teléfono</th>
+    </tr>
+  </thead>
+  <tbody class="fs-5">
+    <tr *ngFor="let user of usuarios.users">
+      <th scope="row">{{user.cedula}}</th>
+      <td>{{user.nombre}}</td>
+      <td>{{user.apellido}}</td>
+      <td>{{user.telefono}}</td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user.cedula)">Eliminar</button></td>
+      <td><button class="btn btn-info" [routerLink]="['/edit', user.cedula]" routerLinkActive="router-link-active">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
