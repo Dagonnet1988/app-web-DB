@@ -2,7 +2,7 @@
 export interface User {
   nombre: string;
   apellido: string;
-  cedula: number|string;
+  cedula: string|number;
   fnacimiento?: Date;
   nacionalidad?:string;
   direccion?:string;

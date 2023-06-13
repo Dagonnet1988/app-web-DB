@@ -47,8 +47,7 @@ export class UserFormComponent implements OnInit {
         error => {
           console.error(error);
         }
-      );
-      };
+      )}
     };
 
   newUser (){

@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ConsultUserComponent } from './components/consult-user/consult-user.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
-import { HomeComponent } from './components/home/home.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Routes = [
-  // {
-  //   // path: 'consultRet',
-  //   // component:
-  // },
+  {
+    path: 'details/:cc',
+    component: DetailsComponent
+  },
   {
     path: 'delete',
     component: ConsultUserComponent
@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: HomeComponent
+    redirectTo: 'consult'
   },
 ];
 

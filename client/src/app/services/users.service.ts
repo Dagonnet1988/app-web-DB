@@ -17,8 +17,8 @@ export class UsersService {
   getUsers(): Observable<User>{
     return this.http.get<User>(`${this.API_URI}/consult`)
   }
-  getUser(cc: string): Observable<User>{
-    return this.http.get<User>(`${this.API_URI}/consult/${cc}`)
+  getUser(cc: string): Observable<User[]>{
+    return this.http.get<User[]>(`${this.API_URI}/consult/${cc}`)
   }
   saveUser(user: User){
     return this.http.post(`${this.API_URI}/create`, user)

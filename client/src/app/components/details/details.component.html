@@ -1,0 +1,73 @@
+<form class="row g-3 m-4" >
+  <div class="col-md-3">
+    <label for="user.cedula" class="form-label">Cédula</label>
+    <input type="text" name="user.cedula" class="form-control" [(ngModel)]="user.cedula" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="user.nombre" class="form-label">Nombre(s)</label>
+    <input type="text" name="user.nombre" [(ngModel)]="user.nombre"  class="form-control" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="Apellido" class="form-label">Apellido(s)</label>
+    <input type="text" [(ngModel)]="user.apellido" name="apellido" class="form-control" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="correo" class="form-label">Email</label>
+    <input type="email" class="form-control" name="correo"  [(ngModel)]="user.correo" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="inputPhone" class="form-label">Teléfono</label>
+    <input type="tel" class="form-control" name="telefono"  [(ngModel)]="user.telefono" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="inputbday" class="form-label">Fecha de nacimiento</label>
+    <input type="date" class="form-control" name="fnacimiento" [(ngModel)]="user.fnacimiento" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="inputAddress" class="form-label">Dirección</label>
+    <input type="text" class="form-control" name="direccion" [(ngModel)]="user.direccion" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="inputCity" class="form-label">Ciudad</label>
+    <input type="text" class="form-control" name="ciudad" ciudad [(ngModel)]="user.ciudad" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="inputNat" class="form-label">Nacionalidad</label>
+    <input type="text" class="form-control" name="nacionalidad" [(ngModel)]="user.nacionalidad" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="InputOcupation" class="form-label">Profesión</label>
+    <input type="text" class="form-control" name="profesion" [(ngModel)]="user.profesion" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="inputExp" class="form-label">Años de experiencia</label>
+    <input type="text" class="form-control" name="experienciaAnos" [(ngModel)]="user.experienciaAnos" disabled>
+  </div>
+  <div class="col-md-3">
+    <label for="inputTec" class="form-label">Tecnologías</label>
+    <input type="text" class="form-control" name="tecnologias"  [(ngModel)]="user.tecnologias" disabled>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPerfil" class="form-label">Perfil</label>
+    <textarea type="Description" class="form-control" name="perfil"  [(ngModel)]="user.perfil" disabled></textarea>
+  </div>
+  <div class="col-md-3">
+    <label for="inputState" class="form-label"> Contratado</label>
+    <select name="empleado" class="form-select" [(ngModel)]="user.empleado" disabled>
+      <option value="false">No</option>
+      <option value="true">Si</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label  class="form-label">Salario</label>
+    <input type="text" class="form-control" name="salario" [(ngModel)]="user.salario" disabled>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Fecha de ingreso</label>
+    <input type="date" class="form-control" name="fingreso" [(ngModel)]="user.fingreso" disabled>
+  </div>
+  <form class="col-md-3">
+    <label class="form-label">Fecha de retiro</label>
+    <input type="date" class="form-control" name="fretiro" [(ngModel)]="user.fretiro" disabled>
+</form>
+

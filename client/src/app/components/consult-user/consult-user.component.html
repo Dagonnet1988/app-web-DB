@@ -1,10 +1,22 @@
-<hr>
+<!-- <hr>
 <div class="container">
   <form class="d-flex" role="search">
     <app-search-box (onValue)="searchForConsult($event)"></app-search-box>
+    <button class="btn btn-primary" [routerLink]="['/details', user.cedula]"> Buscar</button>
   </form>
-</div>
-  <hr>
+</div> -->
+<!-- <div class="container">
+  <div class="form-group">
+    <input
+    type="text"
+    name="filterPost"
+    [(ngModel)]="filterPost"
+    width="100px"
+    class="form-control"
+    placeholder="Número de cédula"
+    >
+  </div>
+</div> -->
 
 
 
@@ -23,8 +35,9 @@
       <td>{{user.nombre}}</td>
       <td>{{user.apellido}}</td>
       <td>{{user.telefono}}</td>
-      <td><button class="btn btn-danger" (click)="deleteUser(user.cedula)">Eliminar</button></td>
+      <td><button class="btn btn-info" [routerLink]="['/details', user.cedula]" routerLinkActive="router-link-active">Detalles</button></td>
       <td><button class="btn btn-info" [routerLink]="['/edit', user.cedula]" routerLinkActive="router-link-active">Editar</button></td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user.cedula)">Eliminar</button></td>
     </tr>
   </tbody>
 </table>

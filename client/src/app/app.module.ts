@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
-import { HomeComponent } from './components/home/home.component';
 import { ConsultUserComponent } from './components/consult-user/consult-user.component';
 
 import { UsersService } from "./services/users.service";
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,8 @@ import { FormsModule } from '@angular/forms';
     NavigationComponent,
     UserFormComponent,
     SearchBoxComponent,
-    HomeComponent,
-    ConsultUserComponent
+    ConsultUserComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

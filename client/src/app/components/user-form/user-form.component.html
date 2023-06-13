@@ -1,23 +1,23 @@
 <form class="row g-3 m-4" >
   <div class="col-md-3">
-    <label for="user.cedula" class="form-label">(*) Cédula</label>
+    <label for="user.cedula" class="form-label">Cédula</label>
     <input type="text" name="user.cedula" class="form-control" [(ngModel)]="user.cedula" required>
   </div>
   <div class="col-md-3">
-    <label for="user.nombre" class="form-label">(*) Nombre(s)</label>
-    <input type="text" name="user.nombre" [(ngModel)]="user.nombre"  class="form-control" [ngModelOptions]="{standalone: true}" required>
+    <label for="user.nombre" class="form-label">Nombre(s)</label>
+    <input type="text" name="user.nombre" [(ngModel)]="user.nombre"  class="form-control">
   </div>
   <div class="col-md-3">
-    <label for="Apellido" class="form-label">(*) Apellido(s)</label>
-    <input type="text" [(ngModel)]="user.apellido" name="apellido" class="form-control" required>
+    <label for="Apellido" class="form-label">Apellido(s)</label>
+    <input type="text" [(ngModel)]="user.apellido" name="apellido" class="form-control" >
   </div>
   <div class="col-md-3">
-    <label for="correo" class="form-label">(*) Email</label>
-    <input type="email" class="form-control" name="correo"  [(ngModel)]="user.correo" required>
+    <label for="correo" class="form-label">Email</label>
+    <input type="email" class="form-control" name="correo"  [(ngModel)]="user.correo" >
   </div>
   <div class="col-md-3">
-    <label for="inputPhone" class="form-label">(*) Teléfono</label>
-    <input type="tel" class="form-control" name="telefono"  [(ngModel)]="user.telefono" required>
+    <label for="inputPhone" class="form-label">Teléfono</label>
+    <input type="tel" class="form-control" name="telefono"  [(ngModel)]="user.telefono" >
   </div>
   <div class="col-md-3">
     <label for="inputbday" class="form-label">Fecha de nacimiento</label>
@@ -44,15 +44,15 @@
     <input type="text" class="form-control" name="experienciaAnos" [(ngModel)]="user.experienciaAnos" >
   </div>
   <div class="col-md-3">
-    <label for="inputTec" class="form-label">(*) Tecnologías</label>
-    <input type="text" class="form-control" name="tecnologias"  [(ngModel)]="user.tecnologias" required>
+    <label for="inputTec" class="form-label">Tecnologías</label>
+    <input type="text" class="form-control" name="tecnologias"  [(ngModel)]="user.tecnologias" >
   </div>
   <div class="col-md-6">
-    <label for="inputPerfil" class="form-label">(*) Perfil</label>
-    <textarea type="Description" class="form-control" name="perfil"  [(ngModel)]="user.perfil" required></textarea>
+    <label for="inputPerfil" class="form-label">Perfil</label>
+    <textarea type="Description" class="form-control" name="perfil"  [(ngModel)]="user.perfil" ></textarea>
   </div>
   <div class="col-md-3">
-    <label for="inputState" class="form-label">(*)  Contratado</label>
+    <label for="inputState" class="form-label">Contratado</label>
     <select name="empleado" class="form-select" [(ngModel)]="user.empleado" >
       <option value="false">No</option>
       <option value="true">Si</option>
@@ -71,15 +71,6 @@
     <input type="date" class="form-control" name="fretiro" [(ngModel)]="user.fretiro" >
   </div>
   <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck" required>
-      <label class="form-check-label" for="gridCheck">
-        Estoy seguro de enviar estos datos.
-      </label>
-    </div>
+    <button class="btn btn-primary" (click)="edit? updateUser() : newUser()">Guardar</button>
   </div>
-  <div class="col-12">
-    <button class="btn btn-primary" (click)="edit? updateUser() : newUser()">Registrar</button>
-  </div>
-  <p>(*) Estos campos son obligatorios.</p>
 </form>
