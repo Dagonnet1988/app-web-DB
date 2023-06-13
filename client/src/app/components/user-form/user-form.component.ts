@@ -57,9 +57,7 @@ export class UserFormComponent implements OnInit {
         console.log(res);
         this.route.navigate(['/consult']);
       },
-      err => {
-        console.error(err);
-      }
+
     )
   }
 
@@ -70,8 +68,6 @@ export class UserFormComponent implements OnInit {
         this.route.navigate(['/consult']);
 
       },
-
-      err => console.error(err)
 
     )
   }
